@@ -1,0 +1,104 @@
+body{
+    margin: 0px;   /* to remove the default body margin */
+}
+
+.coffee-header{
+    position: fixed;  /* to make the header stay in a fixed position even after scrolling*/
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 100px;
+    width: 100%;
+    background-color: #0a2d42; /*background color for nav bar*/
+    z-index: 100;
+}
+
+.div-logo{
+    height: 100%;
+    text-align: center;  
+    margin: 10px;  /*border is the perimeter of the box */   /* margin is the space surrounding outside the box*/
+    float: left;
+   
+}
+
+.logo-text{
+    display: block;
+    font-family: "Helvetica Neue";   /* formatting the logo text*/
+    font-weight: bold;
+    color: white;
+}
+
+.coffee-nav{
+    float: right;
+    height: 100%;
+
+}
+
+.coffee-nav a{
+    color: white;
+    font-size: 15px;
+    font-weight: 700px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   /* selects all the anchor tags in the nav tag*/
+    padding-right: 20px;    /*helps us to keep a distance of 20px between each link */
+    padding-top: 12%;       
+    display: inline-block;   /* to make sure that the padding property is applied to all the nav links*/
+}
+
+.site-content{
+    position: absolute;
+    top: 78px;               /* to move the quote below the navigation bar using absolute positioning 78px from the top*/
+    width: 100%;
+}
+
+.img-content{
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/29/12/54/cafe-1869656_1280.jpg"); /*use website link directly*/
+    height: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.quote{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    top: 10%;
+}
+
+.card-list{
+    width: 100%;
+}
+
+#product{                /*id selector*/
+    text-align: center;
+}
+
+.card{
+    width: 22%;     /*4 images to space them equally in a single row */
+    padding: 1.5%;
+    height: 300px;
+    float: left;
+    text-align: center;
+}
+
+.card img{          /*used to style images inside the card div*/
+    width: 100%;
+}
+
+.order-section{
+    width: 100%;
+}
+
+#order{
+    text-align: center;
+}
+
+.form{
+    width: 200px;
+    margin: 0 auto;  /*sets an equal margin from the left and right and the element will move towards the center of the page*/
+}
+
+.form input{
+    padding: 10px;
+    margin: 10px;
+}
+

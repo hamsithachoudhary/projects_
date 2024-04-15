@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="tracker.css">        <!--basic structure of html code, various meta tags which provides information about thr document such as viewport-->
+  </head>
+  <body>        <!--main content of the website begins-->
+
+    <div class="image">
+      <div class="full_body">
+        <div class="title">Expense Tracker</div>
+        
+        <div class="container">     <!--contains all the elements for our project-->
+          <div class="expenses">    <!--add expense section-->
+            <a href="#" class="buttons" onclick="add_expense_page()">Add Expense</a>   <!--onclick="add_expense_page()"> javascript event-->
+                                                <!--this function displays the table of all the expenses that will be added (initially empty)-->
+            <br>
+
+            <div class="available-expenses">     <!--creating table for expenses-->
+              <div class="sub-title">Expenses</div>
+
+              <table class="expense-table" cellspacing="10px" cellpadding="8px 20px"> <!--padding:top,bottom,left,right-->
+                <tr style="border-bottom: 1px solid white;">
+                  <th>Amount</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                <th>Note</th>
+                </tr>
+
+              </table>
+            </div>
+
+            <form action="#" class="add-new-expense">       <!--will be displayed after clicking 'add expense button'-->
+              <span>
+                <label for="amount">Amount:</label>         <!--form details-->
+
+                <input type="text" class="form-input" name="amount" placeholder="How much?"/>
+              </span>
+
+              <span>
+                <label for="category">Category :</label>    <!--user can select which category they have spent their momey on-->
+
+                <select name="category" id="category">
+                  
+                  <option value="Food">Food</option>  <!--dropdown options-->
+
+                  <option value="Travel">Travel</option>
+
+                  <option value="Groceries">Groceries</option>
+
+                  <option value="Entertainment">Entertainment</option>
+
+                  <option value="Others">Others</option>
+                </select>
+              </span>
+
+              <span>
+                <label for="date">Date:</label>
+
+                <input type="date" class="form-input" name="date" placeholder="dd-mm-yyyy"/>  <!--date-->
+              </span>
+
+              <span>
+                <label for="note">Note:</label>
+
+                <input type="text" class="form-input" name="note" placeholder="What did you spend on?"/>   <!--note-->
+              </span>
+
+              <span>
+                <a href="#" class="buttons" onclick="add_expense()">Submit</a>
+              </span>
+            </form>
+          </div>
+
+          <div class="category">
+            <a href="#" class="buttons" onclick="add_category_page()">Add Category</a>
+                                        <!--this function displays the categories that will be added (initially empty)-->
+            <br>
+
+            <div class="sub-title">Categories</div>
+
+            <div class="available-categories">
+              <span>Food:<span id="food">Rs. spent</span></span>        <!--a box where all the available categories along with their respective amount is reflected-->
+
+              <span>Travel:<span id="travel">Rs. spent</span></span>
+
+              <span>Groceries:<span id="groceries">Rs. spent</span></span>
+
+              <span>Entertainment:<span id="entertainment">Rs. spent</span></span>
+
+              <span>Others:<span id="others">Rs. spent</span></span>
+            </div>
+
+            <form action="#" class="add-category">     <!--will be displayed after clicking 'add category button'-->
+              <span>
+                <label for="category">Category Name:</label>
+
+                <input type="text"class="form-input" name="new-category" placeholder="Enter Category Name:"/>  <!--content inside add category form-->
+              </span>
+
+              <span>
+                <a href="#" class="buttons" onclick="add_category()"> Submit </a>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="tracker.js"></script>
+</html>
